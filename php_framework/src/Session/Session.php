@@ -2,10 +2,7 @@
 namespace php_framework\src\Session;
 
 class Session {
-    private function __construct()
-    {
-        
-    }
+    private function __construct() {}
     public static function start (){
         
         if(!session_id()){
@@ -26,21 +23,16 @@ class Session {
     public static function remove($key){
         unset($_SESSION[$key]);
     }
-    public static function all() {
-        return $_SESSION ;
+    public static function all()
+    {
+        return $_SESSION;
     }
-    public static function destroy() {
-        foreach (static::all() as $key=>$value) {
+    public static function destroy()
+    {
+        foreach (static::all() as $key => $value) {
             static::remove($key);
         }
-    }
-    public  static function flash ($key) {
-        $value = '' ;
-        if (static::has($key)){
-         $value = static::get($key) ;
-         static::remove($key);
-        }
-        return $value ;
 
     }
+
 }

@@ -10,7 +10,6 @@ require __DIR__.'/../vendor/autoload.php';
 Application::run();
 Session::start();
 Session::set('a','b');
-echo  Server::get('REQUEST_SCHEME');
 //echo "<pre>" ;
 //print_r(Server::all());
 //echo "</pre>" ;

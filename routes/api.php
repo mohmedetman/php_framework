@@ -1,2 +1,2 @@
 <?php
-//echo  'omne231432';
+echo  'omne231432';
